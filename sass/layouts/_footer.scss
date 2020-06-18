@@ -1,0 +1,97 @@
+.footer-section {
+  background-color: $background-footer-color;
+  padding: 60px 0;
+}
+
+.foot-container {
+  @include flex(left, baseline);
+}
+
+.foot-adress-box {
+  margin-right: 70px;
+}
+
+.foot-adress-list {
+  font-style: normal;
+  line-height: 1.71;
+}
+
+.foot-adress-item {
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.foot-adress {
+  display: inline-block;
+  color: $additional-font-color;
+}
+
+.foot-mail,
+.foot-phone {
+  display: inline-block;
+  color: $contacts-font-color;
+}
+
+.foot-links-title {
+  display: block;
+  margin-bottom: 21px;
+
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: $additional-font-color;
+}
+
+.foot-social-link {
+  @include flex();
+  @include all-space();
+  border-radius: 50%;
+
+  fill: $additional-font-color;
+  background-color: $footer-backdrop-color;
+
+  @include transitionI(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-font-color;
+  }
+}
+
+.foot-signin-box {
+  margin-left: auto;
+}
+
+.foot-signin-title {
+  display: block;
+  margin-bottom: 21px;
+
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: $additional-font-color;
+}
+
+.foot-input {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding: 0px 15px;
+
+  @include font($size: 16px, $height: 1.25);
+
+  color: $contacts-font-color;
+  background-color: inherit;
+  border: 1px solid $footinput-border-color;
+  box-shadow: $shadow-button;
+  border-radius: 4px;
+
+  &:focus {
+    outline-width: 0px;
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
+  }
+}

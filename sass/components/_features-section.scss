@@ -1,0 +1,33 @@
+.adv-section {
+  padding-top: $section-padding;
+}
+
+.adv-list {
+  display: flex;
+  padding-bottom: $section-padding;
+
+  border-bottom: 1px solid $section-border-color;
+}
+
+.adv-list-item {
+  width: 270px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.adv-title {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: $header-font-color;
+}
+
+.adv-description {
+  margin-bottom: 0px;
+
+  line-height: 1.71;
+}

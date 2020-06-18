@@ -1,0 +1,70 @@
+//flexContainer
+@mixin flex($horizontal: center, $vertical: center) {
+  display: flex;
+  justify-content: $horizontal;
+  align-items: $vertical;
+}
+
+//Accent combination of colors at the project
+@mixin accent-style() {
+  color: $additional-font-color;
+  background-color: $accent-font-color;
+}
+
+//font style
+@mixin font(
+  $weight: 400,
+  $size: 14px,
+  $height: 1.14,
+  $spacing: 0.03em,
+  $family: "Roboto"
+) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+  font-family: $family, sans-serif;
+}
+
+//Main logo styles for header and footer
+@mixin main-logo($right, $bottom, $font-size, $line-height, $color) {
+  display: block;
+  margin-right: $right;
+  margin-bottom: $bottom;
+
+  @include font(700, $font-size, $line-height, $family: "Raleway");
+
+  color: $color;
+}
+
+//tipical transition functions
+@mixin transitionI($property) {
+  transition: $property 250ms $time-function;
+}
+
+@mixin transitionII($propertyI, $propertyII) {
+  transition: $propertyI 250ms $time-function, $propertyII 250ms $time-function;
+}
+
+@mixin transitionIII($propertyI, $propertyII, $propertyIII) {
+  transition: $propertyI 250ms $time-function, $propertyII 250ms $time-function,
+    $propertyIII 250ms $time-function;
+}
+
+@mixin transitionIV($propertyI, $propertyII, $propertyIII, $propertyIV) {
+  transition: $propertyI 250ms $time-function, $propertyII 250ms $time-function,
+    $propertyIII 250ms $time-function, $propertyIV 250ms $time-function;
+}
+
+//fill all available space
+@mixin all-space() {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin all-space-tl() {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

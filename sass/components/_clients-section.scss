@@ -1,0 +1,27 @@
+.client-item {
+  width: 170px;
+  height: 90px;
+
+  border: 1px solid $logo-icons-color;
+  border-radius: 4px;
+  fill: $logo-icons-color;
+
+  @include transitionII(fill, border-color);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    fill: $accent-font-color;
+    border-color: $accent-font-color;
+  }
+}
+
+.client-link {
+  @include flex();
+  @include all-space();
+
+  fill: inherit;
+}

@@ -1,0 +1,15 @@
+.header-logo {
+  @include main-logo(85px, 0px, 26px, 1.19, $header-font-color);
+}
+
+.foot-logo {
+  @include main-logo(0px, 10px, 22px, 1.18, $additional-font-color);
+}
+
+.logo-firstword {
+  margin-right: 10px;
+
+  font: inherit;
+
+  color: $accent-font-color;
+}

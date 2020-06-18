@@ -1,0 +1,70 @@
+.pages-item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.page-link {
+  position: relative;
+  display: inline-block;
+  padding: 32px 0px;
+
+  @include font(500, $spacing: 0.02em);
+
+  color: $header-font-color;
+
+  @include transitionI(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-font-color;
+  }
+}
+
+.active-page {
+  color: $accent-font-color;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+
+    background-color: $accent-font-color;
+  }
+}
+
+.list-contacts {
+  margin-left: auto;
+}
+
+.contacts-item {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.contacts-link {
+  padding: 32px 0px;
+
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  color: $basic-font-color;
+  fill: $basic-font-color;
+
+  @include transitionII(color, fill);
+
+  &:hover,
+  &:focus {
+    color: $accent-font-color;
+    fill: $accent-font-color;
+  }
+}
+
+.with-border {
+  border-bottom: 1px solid $section-border-color;
+}

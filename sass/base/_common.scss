@@ -1,0 +1,94 @@
+body {
+  @include font();
+
+  color: $basic-font-color;
+  background-color: $background-basic-color;
+}
+
+.section {
+  padding: $section-padding 0;
+}
+
+.container {
+  width: $container-width;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.flex {
+  @include flex(left);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
+  margin-top: 0px;
+}
+
+.button {
+  display: inline-flex;
+  min-width: 200px;
+  height: 50px;
+  padding: 0px 28px;
+  align-items: center;
+  justify-content: center;
+
+  @include font(700, 16px, 1.87, 0.06em);
+
+  border-width: 0px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  @include accent-style;
+  box-shadow: $shadow-button;
+
+  &:focus {
+    outline-width: 0px;
+  }
+}
+
+.title {
+  margin-bottom: 50px;
+
+  @include font(700, 36px, 1.17);
+  text-align: center;
+
+  color: $header-font-color;
+}
+
+.social-item {
+  width: 44px;
+  height: 44px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.is-hidden {
+  position: absolute;
+  color: transparent;
+  font-size: 0px;
+  padding: 0px;
+  margin: 0px;
+  width: 1px;
+  height: 1px;
+  margin: -1;
+  clip: rect(0 0 0 0);
+  border: none;
+}

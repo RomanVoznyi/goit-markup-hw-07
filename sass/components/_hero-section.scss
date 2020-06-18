@@ -1,0 +1,21 @@
+.hero-section {
+  margin: 0 auto;
+  padding: 200px 0px;
+  max-width: $biggest-width;
+
+  text-align: center;
+  background-image: linear-gradient($overlay-color, $overlay-color),
+    url(../img/index-img/header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+
+  @include font(900, 44px, 1.36, 0.06em);
+  text-transform: uppercase;
+
+  color: $additional-font-color;
+}
